@@ -11,11 +11,14 @@ Who's leg?
 
 </div>
 <br>
- go<input type= "range" id="myPicker" min="0" max="725">her
+ go<input type= "range" id="myPicker" min="0" max="725" style="width:400px" value="0">her
  <div id="rangeValue"></div>
 </body>
 <script>
 myPicker.onchange=function(){
+	if(myPicker.value == 425 || myPicker.value == 426){
+		alert("Wow!!");
+	}
 	myRect.style.marginLeft=myPicker.value+"px";
 	rangeValue.innerHTML=myPicker.value;
 }
